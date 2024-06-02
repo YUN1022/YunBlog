@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import {generateSidebar} from "vitepress-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,15 +12,20 @@ export default defineConfig({
       { text: 'Examples', link: '/markdown-examples' }
     ],
 
-    sidebar: [
+    sidebar: generateSidebar([
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
+        documentRootPath: 'docs/posts/',
+        scanStartPath: 'python',
+        resolvePath: '/posts/python/',
+        rootGroupText: 'Python'
+      },
+      {
+        documentRootPath: 'docs/posts/',
+        scanStartPath: 'docker',
+        resolvePath: '/posts/docker/',
+        rootGroupText: 'Docker'
       }
-    ],
+    ]),
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }

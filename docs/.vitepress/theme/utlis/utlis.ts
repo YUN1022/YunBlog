@@ -5,11 +5,12 @@ const formatDate = (rawDate: string): string => {
     return date.toLocaleDateString()
 }
 
-const formatFrontMatter = (rawData) :FrontMatter => {
+const formatFrontMatter = (rawData): FrontMatter => {
     return {
         title: rawData.title,
         summary: rawData.summary,
-        date: formatDate(rawData.date)
+        date: formatDate(rawData.date),
+        tags: rawData.tags
     }
 
 }

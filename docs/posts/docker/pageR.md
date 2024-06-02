@@ -1,11 +1,14 @@
 ---
-title: page1
+title: pageR
 summary: About me
 layout: doc
 date: 2024-05-26
+tags:
+- a
+- b
 ---
 
-# A
+# R
 
 ## about a
 
