@@ -7,7 +7,7 @@
       <Feature/>
     </template>
     <template #doc-before>
-      <DocHeader/>
+      <DocHeader :key="store.key"/>
     </template>
     <template #doc-after></template>
   </Layout>
@@ -18,8 +18,14 @@ import DefaultTheme from "vitepress/theme";
 import Home from "./Home.vue";
 import Feature from "./Feature.vue";
 import DocHeader from "./DocHeader.vue";
+import store, {updateKey} from "../utlis/store";
+import {watch} from "vue";
+import {useRoute} from "vitepress";
 
 const Layout = DefaultTheme.Layout
+const route = useRoute()
+
+watch(() => route.path, () => {updateKey(route.path)})
 
 </script>
 

@@ -4,7 +4,7 @@ import {generateSidebar} from "vitepress-sidebar";
 const sidebarConfig = (theme: string) => {
   return {
     documentRootPath: 'docs/posts/',
-    scanStartPath: theme,
+    scanStartPath: `${theme}/`,
     resolvePath: `/posts/${theme}/`,
     rootGroupText: theme.toUpperCase(),
     sortMenusByFrontmatterDate: true,

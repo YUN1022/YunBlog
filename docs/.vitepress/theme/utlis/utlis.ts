@@ -1,4 +1,4 @@
-import {FrontMatter} from "./types";
+import {FrontMatter, Post} from "./types";
 
 const formatDate = (rawDate: string): {date: string, timestamp: number} => {
     const date = new Date(rawDate)
@@ -18,7 +18,7 @@ const formatFrontMatter = (rawData): FrontMatter => {
 
 }
 
-export const formatPost = (page) => ({
+export const formatPost = (page): Post => ({
     ...formatFrontMatter(page.frontmatter),
     url: page.url
 })

@@ -13,6 +13,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "@sindresorhus/slugify": "^2.2.1",
     "vue": "^3.4.27"
   }
 }
