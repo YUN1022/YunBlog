@@ -1,6 +1,17 @@
 import { defineConfig } from 'vitepress'
 import {generateSidebar} from "vitepress-sidebar";
 
+const sidebarConfig = (theme: string) => {
+  return {
+    documentRootPath: 'docs/posts/',
+    scanStartPath: theme,
+    resolvePath: `/posts/${theme}/`,
+    rootGroupText: theme.toUpperCase(),
+    sortMenusByFrontmatterDate: true,
+    sortMenusOrderByDescending: true
+  }
+}
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "YunBlog",
@@ -13,18 +24,8 @@ export default defineConfig({
     ],
 
     sidebar: generateSidebar([
-      {
-        documentRootPath: 'docs/posts/',
-        scanStartPath: 'python',
-        resolvePath: '/posts/python/',
-        rootGroupText: 'Python'
-      },
-      {
-        documentRootPath: 'docs/posts/',
-        scanStartPath: 'docker',
-        resolvePath: '/posts/docker/',
-        rootGroupText: 'Docker'
-      }
+      sidebarConfig('python'),
+      sidebarConfig('docker')
     ]),
 
     socialLinks: [

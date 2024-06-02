@@ -1,15 +1,18 @@
 import {FrontMatter} from "./types";
 
-const formatDate = (rawDate: string): string => {
+const formatDate = (rawDate: string): {date: string, timestamp: number} => {
     const date = new Date(rawDate)
-    return date.toLocaleDateString()
+    return {
+        date: date.toLocaleDateString(),
+        timestamp: date.getTime()
+    }
 }
 
 const formatFrontMatter = (rawData): FrontMatter => {
     return {
+        ...formatDate(rawData.date),
         title: rawData.title,
         summary: rawData.summary,
-        date: formatDate(rawData.date),
         tags: rawData.tags
     }
 

@@ -6,6 +6,8 @@ export const data: Post[] = []
 export default createContentLoader('posts/**/*.md', {
     excerpt: true,
     transform(raw): Post[] {
-        return raw.map(formatPost)
+        return raw.map(formatPost).sort((a, b) => {
+            return b.timestamp - a.timestamp
+        })
     }
 })
