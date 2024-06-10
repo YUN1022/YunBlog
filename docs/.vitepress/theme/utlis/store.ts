@@ -1,4 +1,4 @@
-import {defineComponent, reactive} from 'vue'
+import {reactive} from 'vue'
 import slugify from "@sindresorhus/slugify";
 
 interface State {
