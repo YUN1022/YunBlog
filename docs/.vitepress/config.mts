@@ -8,7 +8,7 @@ const sidebarConfig = (theme: string) => {
     resolvePath: `/posts/${theme}/`,
     rootGroupText: theme.toUpperCase(),
     sortMenusByFrontmatterDate: true,
-    sortMenusOrderByDescending: true,
+    sortMenusOrderByDescending: false,
     useTitleFromFrontmatter: true
   }
 }
