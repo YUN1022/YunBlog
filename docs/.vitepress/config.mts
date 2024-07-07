@@ -20,17 +20,17 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Home', link: '/' }
     ],
 
     sidebar: generateSidebar([
       sidebarConfig('python'),
-      sidebarConfig('docker')
+      sidebarConfig('docker'),
+      sidebarConfig('working'),
     ]),
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/YUN1022/YunBlog' }
     ]
   }
 })
