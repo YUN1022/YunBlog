@@ -9,7 +9,9 @@
     <template #doc-before>
       <DocHeader :key="store.key"/>
     </template>
-    <template #doc-after></template>
+    <template #doc-after>
+      <Comment/>
+    </template>
   </Layout>
 </template>
 
@@ -21,6 +23,7 @@ import DocHeader from "./DocHeader.vue";
 import store, {updateKey} from "../utlis/store";
 import {watch} from "vue";
 import {useRoute} from "vitepress";
+import Comment from "./Comment.vue";
 
 const Layout = DefaultTheme.Layout
 const route = useRoute()
