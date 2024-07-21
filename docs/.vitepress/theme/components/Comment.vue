@@ -8,7 +8,7 @@ const setUterances = () => {
   utterances.setAttribute('issue-term', 'pathname')
   utterances.setAttribute('label', 'Comment')
   utterances.crossOrigin = 'anonymous'
-  utterances.setAttribute('theme', 'gitgub-dark')
+  utterances.setAttribute('theme', 'github-dark')
   document.querySelector('#comment').appendChild(utterances)
 }
 
