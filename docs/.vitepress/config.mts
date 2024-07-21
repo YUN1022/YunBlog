@@ -32,5 +32,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/YUN1022/YunBlog' }
     ]
-  }
+  },
+  appearance: "force-dark"
 })
